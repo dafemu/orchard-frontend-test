@@ -2,8 +2,8 @@ import './ContentWrapper.scss';
 
 export default function ContentWrapper({children}) {
   return (
-    <div className="content-wrapper">
+    <main className="content-wrapper">
         {children}
-    </div>
+    </main>
   )
 }

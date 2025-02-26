@@ -4,7 +4,9 @@ import './TasteColorsSection.scss';
 export default function TasteColorsSection({data, setModalImage}) {
   return (
     <section className='taste-colors-section'>
-      <h2>{data.taste.title}</h2>
+      <header>
+        <h1>{data.taste.title}</h1>
+      </header>
       <div className="taste-colors-section__cards">
         {data.taste.cards.map((card, index) => (
           <div key={index} className="taste-colors-section__card">
