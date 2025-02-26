@@ -1,3 +1,19 @@
-.cooking-section{
+.cooking-section {
+    display: flex;
+    gap: 30px;
     color: white;
+    width: 100%;
+
+    &__images{
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 2fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+    }
+
+    &__content{
+       
+    }
 }
