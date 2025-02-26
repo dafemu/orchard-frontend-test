@@ -1,7 +1,11 @@
 .content-wrapper{
     background-color: #000000;
-    max-width: 1440px;
     color: #ffffff;
-    padding: 120px 147px;
-    margin: 0 auto;
+    padding: 20px;
+
+    @media(min-width: 1200px){
+        padding: 120px 147px;
+        max-width: 1440px;
+        margin: 0 auto;
+    }
 }

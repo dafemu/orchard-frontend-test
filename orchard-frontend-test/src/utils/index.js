@@ -15,9 +15,9 @@ export const data =  {
     taste: {
         title: 'Taste the Colours',
         cards: [
-            { width: 375, height: 300, name: "RED", description: "Red foods remind us of berries and soft fruits, so we anticipate a sweet taste.", image: "/red.jpg" },
-            { width: 375, height: 300,name: "Green", description: "Fresh, zingy green colours are reminiscent of unripe fruit, promising sour or acid flavours", image: "/green.jpg" },
-            { width: 375, height: 300,name: "White", description: "White foods evoke memories of salt and salty flavours, driving the expectation of a savoury treat.", image: "/white.jpg" },
+            { name: "RED", description: "Red foods remind us of berries and soft fruits, so we anticipate a sweet taste.", image: "/red.jpg" },
+            { name: "Green", description: "Fresh, zingy green colours are reminiscent of unripe fruit, promising sour or acid flavours", image: "/green.jpg" },
+            { name: "White", description: "White foods evoke memories of salt and salty flavours, driving the expectation of a savoury treat.", image: "/white.jpg" },
         ]
     }
 };

@@ -12,8 +12,6 @@ export default function TasteColorsSection({data, setModalImage}) {
               src={card.image}
               alt={card.name}
               className="image"
-              width={card.width}
-              height={card.height}
               whileHover={{ scale: 1.1 }}
               onClick={() => setModalImage(card.image)}
             />

@@ -6,13 +6,37 @@
 
     &__cards {
         display: flex;
-        gap: 10px;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+
+        @media(min-width: 1200px) {
+            gap: 10px;
+            flex-wrap: nowrap;
+        }
     }
 
     &__card {
         display: flex;
+        align-items: center;
         flex-direction: column;
         gap: 30px;
+        max-width: 300px;
+
+        @media(min-width: 1200px) {
+            max-width: 100%;
+        }
+
+        .image {
+            width: 250px;
+            height: 250px;
+
+            @media(min-width: 1200px) {
+                width: 375px;
+                height: 300px;
+            }
+        }
     }
 
     &__card-content {

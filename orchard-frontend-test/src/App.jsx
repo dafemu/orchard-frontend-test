@@ -18,7 +18,7 @@ function App() {
         <TasteColorsSection data={data} setModalImage={setModalImage} />
       </ContentWrapper>
 
-      <Dialog open={!!modalImage} onClose={() => setModalImage(null)} className="modal">
+      <Dialog aria-label="Image preview" open={!!modalImage} onClose={() => setModalImage(null)} className="modal">
         <motion.img
           src={modalImage}
           alt="Modal"
