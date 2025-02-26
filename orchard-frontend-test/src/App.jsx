@@ -1,13 +1,23 @@
-import { useState } from 'react';
-import { motion } from "framer-motion";
-import { Dialog } from "@headlessui/react";
+import { useState, useEffect } from 'react';
 import ContentWrapper from './components/ContentWrapper';
 import CookingSection from './components/CookingSection';
 import TasteColorsSection from './components/TasteColorsSection';
 import { data } from './utils';
+import Modal from './components/Modal';
 
 function App() {
   const [modalImage, setModalImage] = useState(null);
+
+  useEffect(() => {
+    const handleAnchorClick = (event) => {
+      if (event.target.tagName === 'A') {
+        console.log("Clicked element:", event.target);
+      }
+    };
+    document.addEventListener("click", handleAnchorClick);
+    return () => document.removeEventListener("click", handleAnchorClick);
+  }, []);
+
   return (
     <>
       <ContentWrapper>
@@ -17,16 +27,7 @@ function App() {
       <ContentWrapper>
         <TasteColorsSection data={data} setModalImage={setModalImage} />
       </ContentWrapper>
-
-      <Dialog aria-label="Image preview" open={!!modalImage} onClose={() => setModalImage(null)} className="modal">
-        <motion.img
-          src={modalImage}
-          alt="Modal"
-          className="modal-image"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-        />
-      </Dialog>
+      <Modal modalImage={modalImage} setModalImage={setModalImage} />
     </>
   )
 }

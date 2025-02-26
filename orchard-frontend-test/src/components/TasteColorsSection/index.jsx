@@ -10,13 +10,15 @@ export default function TasteColorsSection({data, setModalImage}) {
       <div className="taste-colors-section__cards">
         {data.taste.cards.map((card, index) => (
           <div key={index} className="taste-colors-section__card">
-            <motion.img
-              src={card.image}
-              alt={card.name}
-              className="image"
-              whileHover={{ scale: 1.1 }}
-              onClick={() => setModalImage(card.image)}
-            />
+            <a href="#" key={index} onClick={(e) => e.preventDefault()}>
+              <motion.img
+                src={card.image}
+                alt={card.name}
+                className="image"
+                whileHover={{ scale: 1.1 }}
+                onClick={() => setModalImage(card.image)}
+              />
+            </a>
             <div className="taste-colors-section__card-content">
               <h3>{card.name}</h3>
               <p>{card.description}</p>
