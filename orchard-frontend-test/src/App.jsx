@@ -1,11 +1,14 @@
-import './App.scss'
+import ContentWrapper from './components/ContentWrapper';
+import CookingSection from './components/CookingSection';
+import TasteColorsSection from './components/TasteColorsSection';
 
 function App() {
 
   return (
-    <>
-      <h1>Hello World</h1>
-    </>
+    <ContentWrapper>
+      <CookingSection />
+      <TasteColorsSection />
+    </ContentWrapper>
   )
 }
 
