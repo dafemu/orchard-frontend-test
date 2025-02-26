@@ -9,9 +9,14 @@ import { data } from './utils';
 function App() {
   const [modalImage, setModalImage] = useState(null);
   return (
-    <ContentWrapper>
-      <CookingSection data={data} setModalImage={setModalImage} />
-      <TasteColorsSection data={data} setModalImage={setModalImage} />
+    <>
+      <ContentWrapper>
+        <CookingSection data={data} setModalImage={setModalImage} />
+      </ContentWrapper>
+      
+      <ContentWrapper>
+        <TasteColorsSection data={data} setModalImage={setModalImage} />
+      </ContentWrapper>
 
       <Dialog open={!!modalImage} onClose={() => setModalImage(null)} className="modal">
         <motion.img
@@ -22,7 +27,7 @@ function App() {
           animate={{ opacity: 1, scale: 1 }}
         />
       </Dialog>
-    </ContentWrapper>
+    </>
   )
 }
 

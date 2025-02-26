@@ -9,8 +9,8 @@ export default function CookingSection({data, setModalImage}) {
             <motion.img
               key={index}
               src={image.src}
-              alt="Cooking process"
-              className="image"
+              alt={`Cooking image ${index + 1}`}
+              className={`image-${index}`}
               width={image.width}
               height={image.height}
               whileHover={{ scale: 1.05 }}
@@ -21,9 +21,10 @@ export default function CookingSection({data, setModalImage}) {
         <div className='cooking-section__content'>
             <h2>{data.cooking.title}</h2>
             <p>{data.cooking.text}</p>
-
-            <h6 className='cooking-section__eyebrow'>{data.cooking.eyebrow.title}</h6>
-            <p>{data.cooking.eyebrow.text}</p>
+            <div className='cooking-section__eyebrow'>
+              <h6>{data.cooking.eyebrow.title}</h6>
+              <p>{data.cooking.eyebrow.text}</p>
+            </div>
         </div>
     </section>
   )
